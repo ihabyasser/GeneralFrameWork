@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 public typealias CompletionHandler<T: Decodable> = (Result<T, HTTPError>) -> Void
 
 public class HTTPClient {
