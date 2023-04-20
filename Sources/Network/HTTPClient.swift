@@ -6,12 +6,11 @@
 //
 
 import Foundation
+
+public typealias CompletionHandler<T: Decodable> = (Result<T, HTTPError>) -> Void
+
 public class HTTPClient {
-    
-    
     public static let shared = HTTPClient()
-    
-    typealias CompletionHandler<T: Decodable> = (Result<T, HTTPError>) -> Void
     
     public func request<T: Decodable>(url: String,
                                method: HttpMethod = .get,
