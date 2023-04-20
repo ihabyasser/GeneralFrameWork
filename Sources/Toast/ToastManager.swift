@@ -10,7 +10,7 @@ import UIKit
 
 @available(iOS 13.0, *)
 public class ToastManager {
-    static let shared = ToastManager()
+    public static let shared = ToastManager()
     
     private init() { }
     

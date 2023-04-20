@@ -8,7 +8,7 @@ import Foundation
 import SystemConfiguration
 
 public class NetworkManager {
-    static let shared = NetworkManager()
+    public static let shared = NetworkManager()
     
     private var wifiReachability: SCNetworkReachability?
     private var cellularReachability: SCNetworkReachability?

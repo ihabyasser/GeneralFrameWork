@@ -9,7 +9,7 @@ import Foundation
 public class HTTPClient {
     
     
-    static let shared = HTTPClient()
+    public static let shared = HTTPClient()
     
     typealias CompletionHandler<T: Decodable> = (Result<T, HTTPError>) -> Void
     

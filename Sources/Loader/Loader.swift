@@ -11,7 +11,7 @@ import UIKit
 @available(iOS 13.0, *)
 public class Loader {
     
-    static let shared = Loader()
+    public static let shared = Loader()
     
     private var activityIndicatorView: UIActivityIndicatorView?
     private var backgroundView: UIView?
