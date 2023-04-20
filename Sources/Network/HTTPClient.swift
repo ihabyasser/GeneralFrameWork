@@ -13,7 +13,7 @@ public class HTTPClient {
     
     typealias CompletionHandler<T: Decodable> = (Result<T, HTTPError>) -> Void
     
-    func request<T: Decodable>(url: String,
+    public func request<T: Decodable>(url: String,
                                method: HttpMethod = .get,
                                headers: [String: String]? = nil,
                                body: Data? = nil,
