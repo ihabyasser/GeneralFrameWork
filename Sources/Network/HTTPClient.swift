@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class HTTPClient {
+public class HTTPClient {
     
     
     static let shared = HTTPClient()

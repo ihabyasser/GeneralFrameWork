@@ -7,7 +7,7 @@
 import Foundation
 import SystemConfiguration
 
-class NetworkManager {
+public class NetworkManager {
     static let shared = NetworkManager()
     
     private var wifiReachability: SCNetworkReachability?
@@ -69,6 +69,6 @@ class NetworkManager {
         }
     }
 }
-extension Notification.Name {
+public extension Notification.Name {
     static let networkStatusChanged = Notification.Name("NetworkStatusChanged")
 }

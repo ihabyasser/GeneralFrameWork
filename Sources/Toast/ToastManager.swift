@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @available(iOS 13.0, *)
-class ToastManager {
+public class ToastManager {
     static let shared = ToastManager()
     
     private init() { }
