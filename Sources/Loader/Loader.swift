@@ -18,7 +18,7 @@ public class Loader {
     
     private init() {}
     
-    func showLoader() {
+    public func showLoader() {
         if activityIndicatorView == nil {
             activityIndicatorView = UIActivityIndicatorView(style: .large)
             activityIndicatorView?.center = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
@@ -42,7 +42,7 @@ public class Loader {
         }
     }
     
-    func hideLoader() {
+    public func hideLoader() {
         DispatchQueue.main.async {
             self.activityIndicatorView?.stopAnimating()
             self.backgroundView?.removeFromSuperview()
