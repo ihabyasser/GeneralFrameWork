@@ -14,7 +14,7 @@ public class ToastManager {
     
     private init() { }
     
-    func showToast(message: String, duration: TimeInterval = 2.0) {
+    public func showToast(message: String, duration: TimeInterval = 2.0) {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let window = windowScene.windows.first(where: { $0.isKeyWindow }) else {
             return

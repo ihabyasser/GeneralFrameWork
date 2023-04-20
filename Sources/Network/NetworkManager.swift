@@ -12,7 +12,7 @@ public class NetworkManager {
     
     private var wifiReachability: SCNetworkReachability?
     private var cellularReachability: SCNetworkReachability?
-    var isConnected:Bool = false
+    public var isConnected:Bool = false
     private init() {
         setupReachability()
     }
@@ -26,7 +26,7 @@ public class NetworkManager {
         cellularReachability = SCNetworkReachabilityCreateWithName(nil, "www.apple.com")
     }
     
-    func startMonitoring() {
+    public func startMonitoring() {
         var context = SCNetworkReachabilityContext(version: 0, info: nil, retain: nil, release: nil, copyDescription: nil)
         context.info = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
         
