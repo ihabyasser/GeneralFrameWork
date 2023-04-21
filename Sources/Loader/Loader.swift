@@ -13,21 +13,21 @@ public class Loader {
     
     public static let shared = Loader()
     
-    private var activityIndicatorView: UIActivityIndicatorView?
+    private var activityIndicatorView: CustomActivityIndicatorView?
     private var backgroundView: UIView?
     
     private init() {}
     
     public func showLoader() {
         if activityIndicatorView == nil {
-            activityIndicatorView = UIActivityIndicatorView(style: .large)
+            activityIndicatorView = CustomActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 90, height: 90))
             activityIndicatorView?.center = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
-            activityIndicatorView?.hidesWhenStopped = true
+            //activityIndicatorView?.hidesWhenStopped = true
         }
         
         if backgroundView == nil {
             backgroundView = UIView(frame: UIScreen.main.bounds)
-            backgroundView?.backgroundColor = UIColor(white: 0.0, alpha: 0.3)
+            backgroundView?.backgroundColor = UIColor(white: 0.0, alpha: 0.25)
         }
         
         DispatchQueue.main.async {
